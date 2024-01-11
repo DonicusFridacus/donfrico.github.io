@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    position: relative;
+    min-height: 100vh;
+}
+
+/*Styling the image of the title*/
+.titleImage {
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/MultiDevice\ App/images/freddysband.jpg);
+    background-size: cover;
+}
+
+.titleImage::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*Styling the pizzeria name*/
+.pizzaPlace {
+    font-weight: 100;
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+}
+
+/*For any text that needs to be red*/
+.night {
+    color: red;
+}
+
+/*Styling the website title*/
+.webTitle1 {
+    position: relative;
+    opacity: 1;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 30;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 5px black;
+    text-align: center;
+}
+
+.webTitle2 {
+    position: absolute;
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    z-index: 1;
+    opacity: 1;
+    text-decoration: none;
+    font-family: 'Rubik Glitch', cursive;
+    font-weight: 100;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0px 5px red;
+    text-align: left;
+}
+
+/*Styling the bottom text*/
+.bottomText {
+    position: relative;
+    font-family: 'Inconsolata';
+    font-weight: 100;
+    font-size: 30px;
+    color: red;
+    text-shadow: 0px 2px black;
+    text-align: center;
+    opacity: 1;
+}
+
+/*Styling the info*/
+.info {
+    position: relative;
+    font-family: 'Inconsolata';
+    color: white;
+    font-size: 16px;
+}
+
+.info img {
+    float: left;
+}
+
+.leftText {
+    float: left;
+    padding-left: 20px;
+}
+
+/*Styling Links in sideNav*/
+.sideNav a {
+    position: absolute;
+    position: fixed;
+    z-index: 1;
+    left: -80px;
+    transition: 0.5s;
+    padding: 15px;
+    width: 120px;
+    text-decoration: none;
+    font-family: 'Rubik Glitch';
+    font-size: 20px;
+    color: white;
+    text-shadow: 0px 1px blue;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+}
+  
+.sideNav a:hover {
+    left: 0;
+}
+  
+.homeLink {
+    top: 130px;
+    background-color: black;
+    border: 1px solid white;
+}
+  
+.aboutLink {
+    top: 200px;
+    background-color: black;
+    border: 1px solid white;
+}
+  
+.charLink {
+    top: 270px;
+    background-color: black;
+    border: 1px solid white;
+}
+  
+.reviewLink {
+    top: 340px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.aboutLink-button {
+    transition: 2s;
+    background-color: black;
+    border: 1px solid white;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-family: 'Inconsolata';
+    font-size: 20px;
+    color: white;
+    text-shadow: 0px 2px blue;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/*Styling the about button*/
+.aboutLink-button:hover {
+    background-color: white;
+    border: 2px solid purple;
+    text-shadow: none;
+    color: black;
+}
+
+/*Styling the footer*/
+.footer {
+    position: relative;
+    bottom: 0px;
+    color: gray;
+    font-family: 'Inconsolata';
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (max-width: 480px) { /*For screens below 480px*/
+    body {
+        width: 100%;
+        float: none;
+    }
+
+    .pizzaPlace {
+        max-width: 100%;
+        font-size: 40px;
+    }
+
+    .sideNav a {
+        left: -100px;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .bottomText {
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+    .info img {
+        width: 90%;
+        padding-left: 15px;
+    }
+
+    .leftText {
+        font-size: 10px;
+        padding-right: 5px;
+    }
+
+    .aboutLink-button {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .footer {
+        max-width: 100%;
+    }
+
+    .footer h2 {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) { /*For screens between 481px and 800px*/
+    body {
+        width: 100%;
+    }
+
+    .pizzaPlace {
+        max-width: 100%;
+        font-size: 50px;
+    }
+
+    .bottomText {
+        max-width: 100%;
+        font-size: larger;
+    }
+
+    .info img {
+        width: 100%;
+    }
+
+    .aboutLink-button {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .footer {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 801) and (max-width: 1024px) { /*For screens between 801px and 1024px*/
+    body {
+        width: 100%;
+    }
+
+    .bottomText {
+        max-width: 100%;
+        font-size: large;
+    }
+
+    .leftText {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1024px) { /*For screens above 1024px*/
+    body {
+        width: 100%;  
+    }
+
+    .sideNav a {
+        left: -10px;
+    }
+
+    .leftText {
+        font-size: 15px;
+    }
+}
